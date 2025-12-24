@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friends - Prasanna Neupane</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/friends.css">
+</head>
+<body>
+    <div class="friends-page-background"></div>
+    
+    <nav class="friends-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Prasanna</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search friend name...">
+                <button id="searchButton" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="clearSearch" class="clear-search-button" style="display: none;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <a href="index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <!-- 3D Animated Entrance Overlay -->
+    <div class="entrance-overlay" id="entranceOverlay">
+        <div class="entrance-3d-container">
+            <div class="entrance-rotating-cube">
+                <div class="entrance-cube-face">P</div>
+            </div>
+            <div class="entrance-ripple"></div>
+        </div>
+    </div>
+
+    <!-- Main Friends Table -->
+    <div class="friends-main" id="friendsMain">
+        <div class="table-background"></div>
+        <div class="cards-table" id="cardsTable">
+            <!-- Cards will be scattered here -->
+        </div>
+    </div>
+
+    <!-- Modal for detailed view -->
+    <div class="friend-modal" id="friendModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-image-container">
+                <div class="modal-image" id="modalImage"></div>
+            </div>
+            <div class="modal-details">
+                <h2 class="modal-name" id="modalName"></h2>
+                <p class="modal-role" id="modalRole"></p>
+                <p class="modal-description" id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/friends.js"></script>
+</body>
+</html>

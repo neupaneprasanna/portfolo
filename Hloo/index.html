@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasanna Neupane | Frontend Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="background-overlay"></div>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="preloader">
+        <div class="loader-3d">
+            <div class="center-stage">
+                <div class="orbit-container">
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                    <div class="orbit orbit-3"></div>
+                </div>
+                <div class="cube-container">
+                    <div class="cube">
+                        <div class="cube-face front">P</div>
+                        <div class="cube-face back">P</div>
+                        <div class="cube-face right">P</div>
+                        <div class="cube-face left">P</div>
+                        <div class="cube-face top">P</div>
+                        <div class="cube-face bottom">P</div>
+                    </div>
+                </div>
+            </div>
+            <div class="particles-container" id="preloaderParticles"></div>
+            <div class="loading-text">Loading your portfolio...</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">Prasanna</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#artgallery" class="nav-link">Art Gallery</a></li>
+                <li class="nav-item"><a href="friends.html" class="nav-link">Friends</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text-wrapper">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">
+                    <span class="name-line">Prasanna</span>
+                    <span class="name-line">Neupane</span>
+                </h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title-line"></span>
+                    <h2 class="hero-title">Frontend Developer & Artist</h2>
+                    <span class="hero-title-line"></span>
+                </div>
+                <p class="hero-description">Crafting beautiful digital experiences & expressive artwork</p>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">
+                        <span>Discover More</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-container">
+                    <img src="assets/images/prasanna.png" alt="Prasanna" class="hero-image-placeholder">
+                    <div class="hero-image-decoration"></div>
+                    <div class="hero-image-dots"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+        <div class="hero-particles" id="particles"></div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-title-decoration"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <div class="about-image-container">
+                        <img src="https://via.placeholder.com/550x700/2d1b69/d63447?text=Your+Photo" alt="Prasanna" class="about-image-placeholder">
+                        <div class="about-image-frame"></div>
+                        <div class="about-image-pattern"></div>
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="badge-number">12</span>
+                        <span class="badge-text">Grade</span>
+                    </div>
+                </div>
+                <div class="about-text-wrapper">
+                    <div class="about-intro">
+                        <h3>A Passionate Frontend Developer, Artist & High School Student</h3>
+                        <p>My name is <strong>Prasanna Neupane</strong> and I am a high school student currently studying in <strong>Grade 12</strong>. I am a frontend developer who has mastered HTML, CSS, JavaScript, and various frameworks, while also pursuing my passion for visual arts and drawing.</p>
+                        <p>I am passionate about creating beautiful, responsive, and user-friendly web experiences, as well as expressing my creativity through expressive artwork. My journey in web development started with curiosity and has grown into a deep passion for crafting digital solutions, while my artistic journey fuels my eye for design and visual aesthetics.</p>
+                    </div>
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Frontend Development</h4>
+                            <p>Building responsive and interactive user interfaces</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h4>UI/UX Design & Art</h4>
+                            <p>Creating beautiful designs and expressive artwork</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-pencil-alt"></i>
+                            </div>
+                            <h4>Digital & Traditional Art</h4>
+                            <p>Exploring both digital and traditional drawing techniques</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Continuous Learning</h4>
+                            <p>Always exploring new technologies and artistic styles</p>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <h4>My Skills</h4>
+                        <div class="skills-container">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS3 / SASS</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React / Frameworks</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Digital Drawing</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Traditional Drawing</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Illustration & Concept Art</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artgallery" class="art-gallery-section">
+        <div class="gallery-world-entry"></div>
+        <div class="gallery-outer-box">
+            <div class="gallery-corner-light gallery-corner-tl"></div>
+            <div class="gallery-corner-light gallery-corner-tr"></div>
+            <div class="gallery-corner-light gallery-corner-bl"></div>
+            <div class="gallery-corner-light gallery-corner-br"></div>
+            
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">Creative Expression</span>
+                    <h2 class="section-title">Art Gallery</h2>
+                    <div class="section-title-decoration"></div>
+                    <p class="section-description">A collection of my digital and traditional artwork</p>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-grid">
+                    <!-- Portrait Category Header -->
+                    <div class="gallery-category-header">Portrait</div>
+                    
+                    <div class="gallery-item" data-category="portrait">
+                        <div class="gallery-image-wrapper">
+                            <img src="https://via.placeholder.com/350x350/8B4789/ffffff?text=Portrait+1" alt="Portrait Study">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Portrait Study</h3>
+                                    <p>Character expression and facial features</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="portrait">
+                        <div class="gallery-image-wrapper">
+                            <img src="https://via.placeholder.com/350x350/9B5FA3/ffffff?text=Portrait+2" alt="Character Portrait">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Character Portrait</h3>
+                                    <p>Emotional depth and personality</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ongoing Drawings Category Header -->
+                    <div class="gallery-category-header">Ongoing Drawings</div>
+                    
+                    <div class="gallery-item" data-category="ongoing">
+                        <div class="gallery-image-wrapper">
+                            <img src="https://via.placeholder.com/350x350/D4A574/000000?text=Work+in+Progress" alt="Work in Progress">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Work in Progress</h3>
+                                    <p>Exploring new techniques and ideas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="ongoing">
+                        <div class="gallery-image-wrapper">
+                            <img src="https://via.placeholder.com/350x350/E5B895/000000?text=Sketch+Study" alt="Sketch Study">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Sketch Study</h3>
+                                    <p>Daily drawing practice and exploration</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Category Header -->
+                    <div class="gallery-category-header">Anime</div>
+                    
+                    <div class="gallery-item" data-category="anime">
+                        <div class="gallery-image-wrapper">
+                            <img src="https://via.placeholder.com/350x350/FF69B4/ffffff?text=Anime+Character" alt="Anime Character">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Anime Character</h3>
+                                    <p>Dynamic pose and expressive eyes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="anime">
+                        <div class="gallery-image-wrapper">
+                            <img src="https://via.placeholder.com/350x350/FF1493/ffffff?text=Anime+Scene" alt="Anime Scene">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Anime Scene</h3>
+                                    <p>Storytelling through animation style</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nature Category Header -->
+                    <div class="gallery-category-header">Nature</div>
+                    
+                    <div class="gallery-item" data-category="nature">
+                        <div class="gallery-image-wrapper">
+                            <img src="https://via.placeholder.com/350x350/228B22/ffffff?text=Nature+Landscape" alt="Landscape">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Landscape Study</h3>
+                                    <p>Natural scenery and environmental beauty</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="nature">
+                        <div class="gallery-image-wrapper">
+                            <img src="https://via.placeholder.com/350x350/32CD32/000000?text=Flora+Fauna" alt="Flora & Fauna">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Flora & Fauna</h3>
+                                    <p>Detailed nature and wildlife studies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="questions" class="questions-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Know Me Better</span>
+                <h2 class="section-title">Personal Questions</h2>
+                <div class="section-title-decoration"></div>
+            </div>
+            <div class="questions-container">
+                <div class="question-item" data-aos="fade-up">
+                    <div class="question-header">
+                        <h3 class="question-title">
+                            <i class="fas fa-question-circle"></i>
+                            What inspired you to become a developer?
+                        </h3>
+                        <span class="question-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="question-content">
+                        <p>My journey into web development started when I first saw the magic of creating something from just lines of code. The ability to bring ideas to life on the web fascinated me, and I've been passionate about it ever since.</p>
+                    </div>
+                </div>
+                <div class="question-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="question-header">
+                        <h3 class="question-title">
+                            <i class="fas fa-question-circle"></i>
+                            What are your future goals?
+                        </h3>
+                        <span class="question-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="question-content">
+                        <p>I aspire to become a full-stack developer and create innovative web applications that solve real-world problems. I also want to continue learning new technologies and contribute to open-source projects.</p>
+                    </div>
+                </div>
+                <div class="question-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="question-header">
+                        <h3 class="question-title">
+                            <i class="fas fa-question-circle"></i>
+                            What do you do in your free time?
+                        </h3>
+                        <span class="question-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="question-content">
+                        <p>When I'm not coding, I love drawing and creating artwork – both digitally and traditionally. I also spend time with friends, exploring new technologies, playing video games, and reading about the latest trends in web development. I find that drawing helps me stay creative and inspired with my coding projects too!</p>
+                    </div>
+                </div>
+                <div class="question-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="question-header">
+                        <h3 class="question-title">
+                            <i class="fas fa-question-circle"></i>
+                            What's your favorite programming language?
+                        </h3>
+                        <span class="question-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="question-content">
+                        <p>JavaScript is my favorite! It's incredibly versatile and allows me to create both frontend and backend applications. The ecosystem around JavaScript, with frameworks like React and Node.js, makes development exciting and efficient.</p>
+                    </div>
+                </div>
+                <div class="question-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="question-header">
+                        <h3 class="question-title">
+                            <i class="fas fa-question-circle"></i>
+                            What advice would you give to aspiring developers and artists?
+                        </h3>
+                        <span class="question-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="question-content">
+                        <p>Never stop learning! The tech industry evolves rapidly, and so does the art world – stay curious and keep creating projects in both fields. Don't be afraid to make mistakes – they're the best teachers. And most importantly, enjoy the process of creating! Your creativity will enhance everything you build, whether it's code or art.</p>
+                    </div>
+                </div>
+
+                <div class="message-form-wrapper" data-aos="fade-up" data-aos-delay="500">
+                    <div class="message-form-header">
+                        <div class="message-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3>Send Me a Message</h3>
+                        <p>Have a question or just want to say hi? Drop me a message!</p>
+                    </div>
+                    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="message-form" id="messageForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                                    <span class="input-focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                                    <span class="input-focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper textarea-wrapper">
+                                <i class="fas fa-comment-dots"></i>
+                                <textarea name="message" id="message" placeholder="Your Message..." rows="5" required></textarea>
+                                <span class="input-focus-border"></span>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New message from Portfolio Website!">
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                            <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="section-title-decoration"></div>
+                <p class="section-description">Feel free to reach out for collaborations or just a friendly hello!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info-wrapper">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>prasanna@example.com</p>
+                        <a href="mailto:prasanna@example.com" class="contact-link">Send Email</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Nepal</p>
+                        <span class="contact-link">Based Here</span>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+977 XXXXXXXXXX</p>
+                        <a href="tel:+977XXXXXXXXXX" class="contact-link">Call Me</a>
+                    </div>
+                </div>
+                <div class="social-links-wrapper">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-tooltip="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Community Impact</span>
+                <h2 class="section-title">Visitor Counter</h2>
+                <div class="section-title-decoration"></div>
+                <p class="section-description">Join the amazing visitors who've explored my portfolio!</p>
+            </div>
+            <div class="stats-content">
+                <div class="spheres-container">
+                    <div class="visitor-sphere-container sphere-purple">
+                        <div class="visitor-sphere" id="counterSphere1">
+                            <div class="sphere-glow"></div>
+                            <div class="sphere-core">P</div>
+                            <div class="sphere-rings">
+                                <div class="ring ring-1"></div>
+                                <div class="ring ring-2"></div>
+                                <div class="ring ring-3"></div>
+                            </div>
+                            <div class="sphere-particles"></div>
+                        </div>
+                    </div>
+                    <div class="visitor-sphere-container sphere-orange">
+                        <div class="visitor-sphere" id="counterSphere2">
+                            <div class="sphere-glow"></div>
+                            <div class="sphere-core">N</div>
+                            <div class="sphere-rings">
+                                <div class="ring ring-1"></div>
+                                <div class="ring ring-2"></div>
+                                <div class="ring ring-3"></div>
+                            </div>
+                            <div class="sphere-particles"></div>
+                        </div>
+                    </div>
+                    <div class="visitor-sphere-container sphere-teal">
+                        <div class="visitor-sphere" id="counterSphere3">
+                            <div class="sphere-glow"></div>
+                            <div class="sphere-core">A</div>
+                            <div class="sphere-rings">
+                                <div class="ring ring-1"></div>
+                                <div class="ring ring-2"></div>
+                                <div class="ring ring-3"></div>
+                            </div>
+                            <div class="sphere-particles"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="counter-display">
+                    <div class="display-label">Total Visitors</div>
+                    <div class="display-counter">
+                        <span id="count" class="counter-number">0</span>
+                        <span class="counter-suffix">+</span>
+                    </div>
+                </div>
+                
+                <div class="visitor-particles" id="visitorParticles"></div>
+                
+                <button class="counter-interact-btn" id="counterBtn">
+                    <span class="btn-text">You're Visitor #<span id="ordinal">1</span></span>
+                    <span class="btn-glow"></span>
+                </button>
+                
+                <div class="counter-stats-display">
+                    <div class="stat-display-item">
+                        <span class="stat-label">Community Members</span>
+                        <span class="stat-value" id="visitorStat">0</span>
+                    </div>
+                </div>
+                
+                <div class="counter-stats-info">
+                    <div class="stat-info-card">
+                        <div class="stat-icon">👥</div>
+                        <h4>Growing Community</h4>
+                        <p>Be part of an amazing journey of portfolio visitors from around the world!</p>
+                    </div>
+                    <div class="stat-info-card">
+                        <div class="stat-icon">✨</div>
+                        <h4>Each Visit Matters</h4>
+                        <p>Every visitor helps me improve and motivates me to create better content!</p>
+                    </div>
+                    <div class="stat-info-card">
+                        <div class="stat-icon">🚀</div>
+                        <h4>Live Counter</h4>
+                        <p>This counter is live and updates in real-time with every visitor!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Prasanna</span>
+                    <span class="logo-dot">.</span>
+                </div>
+                <p class="footer-text">Frontend Developer & Artist | High School Student</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Prasanna Neupane. All Rights Reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> in Nepal</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
