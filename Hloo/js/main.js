@@ -1286,60 +1286,60 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Escaping Name Effect - Run all over screen
-document.addEventListener('DOMContentLoaded', function() {
-    const heroName = document.querySelector('.hero-name');
-    if (!heroName) return;
-    
-    let isEscaping = false;
-    let currentX = 0;
-    let currentY = 0;
-    
-    heroName.style.position = 'relative';
-    heroName.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-    
-    heroName.addEventListener('mouseenter', function() {
-        if (isEscaping) return;
-        isEscaping = true;
-        heroName.classList.add('escaping');
-    });
-    
-    heroName.addEventListener('mousemove', function(e) {
-        if (!isEscaping) return;
-        
-        const rect = heroName.getBoundingClientRect();
-        const nameX = rect.left + rect.width / 2;
-        const nameY = rect.top + rect.height / 2;
-        
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-        
-        const dx = nameX - mouseX;
-        const dy = nameY - mouseY;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        
-        // If cursor is close, name runs away
-        if (distance < 250) {
-            const angle = Math.atan2(dy, dx);
-            const escapeDistance = 300 + (250 - distance);
-            currentX = Math.cos(angle) * escapeDistance;
-            currentY = Math.sin(angle) * escapeDistance;
-            
-            // Clamp to screen bounds with padding
-            const padding = 50;
-            currentX = Math.max(-window.innerWidth / 2 + padding, Math.min(window.innerWidth / 2 - padding, currentX));
-            currentY = Math.max(-window.innerHeight / 2 + padding, Math.min(window.innerHeight / 2 - padding, currentY));
-            
-            heroName.style.transform = `translate(${currentX}px, ${currentY}px)`;
-        }
-    });
-    
-    heroName.addEventListener('mouseleave', function() {
-        isEscaping = false;
-        heroName.classList.remove('escaping');
-        heroName.style.transition = 'transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        heroName.style.transform = 'translate(0, 0)';
-        currentX = 0;
-        currentY = 0;
-    });
-});
+// Escaping Name Effect - DISABLED
+// document.addEventListener('DOMContentLoaded', function() {
+//     const heroName = document.querySelector('.hero-name');
+//     if (!heroName) return;
+//     
+//     let isEscaping = false;
+//     let currentX = 0;
+//     let currentY = 0;
+//     
+//     heroName.style.position = 'relative';
+//     heroName.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+//     
+//     heroName.addEventListener('mouseenter', function() {
+//         if (isEscaping) return;
+//         isEscaping = true;
+//         heroName.classList.add('escaping');
+//     });
+//     
+//     heroName.addEventListener('mousemove', function(e) {
+//         if (!isEscaping) return;
+//         
+//         const rect = heroName.getBoundingClientRect();
+//         const nameX = rect.left + rect.width / 2;
+//         const nameY = rect.top + rect.height / 2;
+//         
+//         const mouseX = e.clientX;
+//         const mouseY = e.clientY;
+//         
+//         const dx = nameX - mouseX;
+//         const dy = nameY - mouseY;
+//         const distance = Math.sqrt(dx * dx + dy * dy);
+//         
+//         // If cursor is close, name runs away
+//         if (distance < 250) {
+//             const angle = Math.atan2(dy, dx);
+//             const escapeDistance = 300 + (250 - distance);
+//             currentX = Math.cos(angle) * escapeDistance;
+//             currentY = Math.sin(angle) * escapeDistance;
+//             
+//             // Clamp to screen bounds with padding
+//             const padding = 50;
+//             currentX = Math.max(-window.innerWidth / 2 + padding, Math.min(window.innerWidth / 2 - padding, currentX));
+//             currentY = Math.max(-window.innerHeight / 2 + padding, Math.min(window.innerHeight / 2 - padding, currentY));
+//             
+//             heroName.style.transform = `translate(${currentX}px, ${currentY}px)`;
+//         }
+//     });
+//     
+//     heroName.addEventListener('mouseleave', function() {
+//         isEscaping = false;
+//         heroName.classList.remove('escaping');
+//         heroName.style.transition = 'transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+//         heroName.style.transform = 'translate(0, 0)';
+//         currentX = 0;
+//         currentY = 0;
+//     });
+// });

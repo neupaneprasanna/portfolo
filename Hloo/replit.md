@@ -21,6 +21,8 @@ A modern, advanced personal portfolio website for Prasanna Neupane - a Grade 12 
 ```
 
 ## Recent Updates (December 2025)
+- Added password protection to friends page (password: "handsome")
+- Password modal appears before accessing friends section with elegant wooden styling
 - Added friend photos support to friends page with `image` paths in friendsData array
 - Implemented completely redesigned mobile UI/UX for friends page (768px and below)
 - Mobile friends section now features: grid card layout (2 cols on tablets, 1 col on phones), simple white theme, fixed navbar with search bar, no animations, clean photo-first cards
@@ -46,6 +48,10 @@ A modern, advanced personal portfolio website for Prasanna Neupane - a Grade 12 
 - **Unique Scroll Effects**: Advanced GSAP ScrollTrigger animations
 
 ### Friends Page (friends.html)
+- **Password Protection**: Secure access with password verification before viewing friends
+  - Enter password "handsome" to gain access
+  - Beautiful modal with wooden styling that matches the portfolio design
+  - Error messages for incorrect password attempts
 - **Separate Immersive Experience**: Unique website-like experience just for friends
 - **Wavering Background**: Smooth flowing wave animations
 - **Theatrical Curtain Effect**: Curtains open from middle on page load or click

@@ -16,6 +16,30 @@
 <body>
     <div class="friends-page-background"></div>
     
+    <!-- Password Protection Modal (initially visible) -->
+    <div class="password-modal" id="passwordModal" style="display: flex;">
+        <div class="password-particles" id="passwordParticles"></div>
+        <div class="password-container">
+            <div class="password-glow-background"></div>
+            <div class="password-light-rays">
+                <div class="light-ray"></div>
+                <div class="light-ray"></div>
+                <div class="light-ray"></div>
+            </div>
+            <h2 class="password-title">Access Friends Section</h2>
+            <p class="password-subtitle">Enter password to continue</p>
+            <div class="input-wrapper">
+                <input type="password" id="passwordInput" class="password-input" placeholder="Enter password" autofocus>
+                <div class="input-glow"></div>
+            </div>
+            <button id="passwordSubmit" class="password-submit">
+                <span class="submit-text">Enter</span>
+                <div class="submit-glow"></div>
+            </button>
+            <div class="password-error" id="passwordError"></div>
+        </div>
+    </div>
+    
     <nav class="friends-navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
