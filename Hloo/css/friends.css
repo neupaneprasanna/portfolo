@@ -978,7 +978,7 @@ html, body {
 
 .modal-image-container {
     width: 100%;
-    height: 300px;
+    height: 450px;
     overflow: hidden;
     border-radius: 17px 17px 0 0;
     position: relative;
@@ -1104,12 +1104,18 @@ html, body {
     .password-particles,
     .password-glow-background,
     .password-light-rays,
-    .table-background {
+    .table-background,
+    .entrance-overlay {
         animation: none !important;
     }
     
     body {
         background: #fff !important;
+    }
+
+    /* HIDE ENTRANCE OVERLAY ON MOBILE */
+    .entrance-overlay {
+        display: none !important;
     }
 
     /* FRIENDS PAGE BACKGROUND */
@@ -1121,24 +1127,39 @@ html, body {
         display: none !important;
     }
 
+    html, body {
+        height: auto !important;
+        overflow-y: auto !important;
+    }
+
     .friends-main {
         background: #fff !important;
         padding-top: 0 !important;
+        position: static !important;
+        height: auto !important;
+        width: 100% !important;
+        min-height: auto !important;
+        display: block !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        z-index: 99 !important;
     }
 
     /* CARDS - MOBILE GRID LAYOUT */
     .cards-table {
         position: static !important;
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: 1fr !important;
         gap: 12px !important;
-        padding: 90px 12px 20px !important;
+        padding: 70px 12px 20px !important;
         top: auto !important;
         left: auto !important;
         width: 100% !important;
         height: auto !important;
         z-index: 50 !important;
         perspective: none !important;
+        overflow: visible !important;
+        background: #fff !important;
     }
 
     .card-old-paper {
@@ -1160,6 +1181,7 @@ html, body {
         transition: all 0.3s ease !important;
         padding: 0 !important;
         overflow: hidden !important;
+        margin: 0 !important;
     }
 
     .card-old-paper:hover {
@@ -1172,26 +1194,34 @@ html, body {
         display: none !important;
     }
 
-    .card-tear {
+    .card-tear,
+    .card-tear-1,
+    .card-tear-2,
+    .card-tear-3 {
         display: none !important;
     }
 
     .card-image-wrapper {
         width: 100% !important;
-        height: 140px !important;
+        height: 100px !important;
         overflow: hidden !important;
-        border-radius: 12px 12px 0 0 !important;
+        border-radius: 8px 8px 0 0 !important;
         background: #f0f0f0 !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
     }
 
     .card-image {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
+        border-radius: 0 !important;
     }
 
     .card-content {
-        padding: 12px !important;
+        padding: 8px 10px !important;
         flex: 1 !important;
         display: flex !important;
         flex-direction: column !important;
@@ -1200,155 +1230,178 @@ html, body {
     }
 
     .card-friend-name {
-        font-size: 1rem !important;
+        font-size: 0.9rem !important;
         font-weight: 700 !important;
         color: #333 !important;
-        margin: 0 0 4px 0 !important;
+        margin: 0 0 2px 0 !important;
         text-shadow: none !important;
     }
 
     .card-friend-role {
-        font-size: 0.75rem !important;
+        font-size: 0.65rem !important;
         color: #999 !important;
         font-style: italic !important;
         margin: 0 !important;
         text-shadow: none !important;
     }
 
+    /* HIDE SEARCH FUNCTIONALITY ON MOBILE */
+    .search-container {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    .search-input {
+        display: none !important;
+    }
+
+    .search-button {
+        display: none !important;
+    }
+
+    .clear-search-button {
+        display: none !important;
+    }
+
     /* SINGLE COLUMN ON VERY SMALL PHONES */
     @media (max-width: 480px) {
         .cards-table {
             grid-template-columns: 1fr !important;
+            gap: 8px !important;
+            padding: 70px 10px 20px !important;
         }
 
         .card-image-wrapper {
-            height: 160px !important;
+            height: 100px !important;
         }
 
         .card-friend-name {
-            font-size: 1.1rem !important;
+            font-size: 0.9rem !important;
         }
 
         .card-friend-role {
-            font-size: 0.8rem !important;
+            font-size: 0.65rem !important;
+        }
+
+        .entrance-overlay {
+            display: none !important;
         }
     }
     /* TWO COLUMNS ON TABLETS */
-    @media (min-width: 769px) and (max-width: 900px) {
+    @media (min-width: 481px) and (max-width: 900px) {
         .cards-table {
-            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-columns: 1fr !important;
+            gap: 10px !important;
+            padding: 70px 12px 20px !important;
+        }
+
+        .entrance-overlay {
+            display: none !important;
         }
     }
 
-    /* NAVBAR - SIMPLE & CLEAN */
+    /* NAVBAR - ENGAGING & MODERN */
     .friends-navbar {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         width: 100%;
-        background: #fff !important;
-        border-bottom: 1px solid #e0e0e0;
+        background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%) !important;
+        border-bottom: 2px solid #6633ff;
         z-index: 1000;
-        padding: 12px 0 !important;
-        box-shadow: none !important;
+        padding: 14px 0 !important;
+        box-shadow: 0 4px 12px rgba(102, 51, 255, 0.08) !important;
     }
 
     .nav-container {
-        display: grid !important;
-        grid-template-columns: 1fr auto !important;
-        gap: 12px !important;
-        padding: 10px 12px !important;
+        display: flex !important;
+        justify-content: space-between !important;
         align-items: center !important;
+        gap: 12px !important;
+        padding: 8px 12px !important;
     }
 
     .logo {
-        font-size: 1.1rem !important;
-        font-weight: 600;
-        color: #333 !important;
+        font-size: 1rem !important;
+        font-weight: 800;
+        background: linear-gradient(135deg, #d63447 0%, #ff6b7a 100%) !important;
+        color: #fff !important;
         text-shadow: none !important;
-        letter-spacing: 0 !important;
+        letter-spacing: 1px !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        transition: all 0.3s ease !important;
+        padding: 8px 14px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 12px rgba(214, 52, 71, 0.3) !important;
+    }
+
+    .logo:hover {
+        transform: translateY(-3px) scale(1.05) !important;
+        box-shadow: 0 8px 20px rgba(214, 52, 71, 0.4) !important;
+        background: linear-gradient(135deg, #ff6b7a 0%, #d63447 100%) !important;
+    }
+
+    .logo:active {
+        transform: translateY(-1px) scale(1.02) !important;
+    }
+
+    .logo-text {
+        font-weight: 800 !important;
+        letter-spacing: 1px !important;
+    }
+
+    .logo-dot {
+        color: #ffd700 !important;
+        font-weight: 900 !important;
+        font-size: 1.3rem !important;
+        animation: logoDotPulse 2s ease-in-out infinite !important;
+    }
+
+    @keyframes logoDotPulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
     }
 
     .search-container {
         grid-column: 1 / -1 !important;
         order: 3 !important;
+        display: none !important;
     }
 
     .back-button {
-        font-size: 0.75rem !important;
-        color: #666 !important;
-        background: #f5f5f5 !important;
-        border: 1px solid #ddd !important;
-        padding: 6px 10px !important;
-        border-radius: 4px !important;
+        font-size: 0.8rem !important;
+        color: #fff !important;
+        background: linear-gradient(135deg, #6633ff 0%, #7744ff 100%) !important;
+        border: none !important;
+        padding: 8px 14px !important;
+        border-radius: 6px !important;
         white-space: nowrap !important;
         text-decoration: none;
-        box-shadow: none !important;
+        box-shadow: 0 4px 12px rgba(102, 51, 255, 0.3) !important;
         transform: none !important;
         cursor: pointer;
+        font-weight: 600 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        transition: all 0.3s ease !important;
     }
 
     .back-button:hover {
-        background: #f5f5f5 !important;
-        transform: none !important;
+        background: linear-gradient(135deg, #7744ff 0%, #8855ff 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 16px rgba(102, 51, 255, 0.4) !important;
     }
 
-    /* SEARCH BAR - PROMINENT & FUNCTIONAL */
-    .search-container {
-        display: flex;
-        gap: 6px;
-        width: 100%;
+    .back-button:active {
+        transform: translateY(0) !important;
     }
 
-    .search-input {
-        flex: 1;
-        padding: 10px 12px !important;
-        font-size: 0.95rem !important;
-        border: 1px solid #ddd !important;
-        border-radius: 4px !important;
-        background: #f9f9f9 !important;
-        color: #333 !important;
-        font-family: inherit;
-        box-shadow: none !important;
-    }
-
-    .search-input::placeholder {
-        color: #999;
-    }
-
-    .search-button {
-        padding: 10px 12px !important;
-        background: #6633ff !important;
-        color: white !important;
-        border: none !important;
-        border-radius: 4px !important;
-        font-size: 0.9rem;
-        cursor: pointer;
-        box-shadow: none !important;
-        font-weight: 500;
-    }
-
-    .clear-search-button {
-        padding: 10px 12px !important;
-        background: #ff6b6b !important;
-        color: white !important;
-        border: none !important;
-        border-radius: 4px !important;
-        font-size: 0.9rem;
-        cursor: pointer;
-        box-shadow: none !important;
-    }
-
-    /* CARDS CONTAINER */
-    .cards-table {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        padding: 80px 10px 20px;
-        position: static !important;
-        background: #fff;
-    }
 
     /* CARD STYLING - SUPER SIMPLE */
     .card-old-paper {
@@ -1456,7 +1509,7 @@ html, body {
 
     .modal-image-container {
         width: 100%;
-        height: 200px !important;
+        height: 300px !important;
         border-radius: 0;
     }
 
